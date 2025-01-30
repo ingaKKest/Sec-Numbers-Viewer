@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SEC data</title>
+    <link rel="stylesheet" href="static/css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Enter Ticker</h1>
+    </header>
+    <div class="input-container">
+      <form method="POST">
+        <input
+          type="text"
+          name="user_input"
+          id="userInput"
+          placeholder="e.g AAPL"
+        />
+        <button
+          id="sendButton"
+          style="padding: 10px 20px; font-size: 16px; margin-left: 10px"
+        >
+          Confirm
+        </button>
+      </form>
+    </div>
+
+    <div id="table-container">
+      <!-- Tables will be inserted here dynamically -->
+    </div>
+
+    <!-- The Next button, initially hidden -->
+    <div class="button-container">
+      <button id="backButton">Back</button>
+      <button id="nextButton">Next</button>
+    </div>
+
+    <button
+      id="viewReportButton"
+      style="padding: 12px 26px; font-size: 16px; margin-top: 20px"
+    >
+      View Report
+    </button>
+
+    <script src="static/js/script.js"></script>
+  </body>
+</html>

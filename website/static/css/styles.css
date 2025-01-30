@@ -1,0 +1,179 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #121212; /* Dark background */
+  color: #e0e0e0; /* Light grey text */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Header */
+header {
+  background: rgba(19, 19, 19, 0.8); /* Dark header */
+  padding: 20px;
+  width: 80%;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  margin-top: 20px;
+  font-size: 24px;
+  color: #ff5722; /* Vibrant orange for header text */
+}
+
+/* Form Styling */
+.input-container {
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  font-size: 18px;
+  width: 280px;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  background: #1f1f1f; /* Dark grey background */
+  color: #e0e0e0; /* Light grey text */
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  background: #333; /* Lighter dark background on focus */
+  box-shadow: 0px 0px 10px rgba(255, 87, 34, 0.5); /* Orange glow effect */
+}
+
+/* Buttons */
+button {
+  padding: 12px 26px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+/* Confirm Button */
+#sendButton {
+  background: #ff5722; /* Vibrant Orange */
+  color: white;
+  box-shadow: 0px 4px 10px rgba(255, 87, 34, 0.5);
+}
+
+#sendButton:hover {
+  background: #e64a19;
+  transform: scale(1.05);
+}
+
+.button-container {
+  width: 85%;
+  margin: 20px auto;
+  display: flex;
+  justify-content: space-between; /* Aligns buttons to opposite sides */
+  gap: 20px; /* Adds some space between the buttons */
+}
+
+/* Next & Back Buttons */
+#viewReportButton,
+#nextButton,
+#backButton {
+  display: none;
+  padding: 12px 26px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  letter-spacing: 1px;
+  width: 45%; /* Makes each button take up roughly 45% of the container's width */
+}
+
+#nextButton {
+  background: #333333; /* Dark grey */
+  color: #e0e0e0;
+}
+
+#backButton {
+  background: #333333; /* Dark grey */
+  color: #e0e0e0;
+}
+
+#nextButton:hover,
+#backButton:hover {
+  background: #444;
+  transform: scale(1.05);
+}
+
+/* Table Container */
+#table-container {
+  width: 85%;
+  margin: 20px auto;
+  overflow-x: auto;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #1f1f1f; /* Dark grey background for table */
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+thead {
+  background: #333; /* Dark grey */
+  color: #ff5722; /* Vibrant orange for header text */
+}
+
+thead th {
+  padding: 15px;
+  font-size: 18px;
+}
+
+tbody tr {
+  transition: all 0.3s ease-in-out;
+}
+
+tbody tr:nth-child(even) {
+  background: #262626; /* Slightly lighter grey for alternating rows */
+}
+
+tbody tr:hover {
+  background: #333333;
+  transform: scale(1.02);
+}
+
+/* Table Data */
+td {
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  color: #e0e0e0; /* Light grey text */
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
